@@ -15,27 +15,32 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button buttonOfShowJumpBetweenActivities =(Button) findViewById(R.id.showJumpBetweenActivities);
-        buttonOfShowJumpBetweenActivities.setOnClickListener(new View.OnClickListener() {
+        Button explicitIntent_bt1 = (Button) findViewById(R.id.explicitIntent_bt1);
+        explicitIntent_bt1.setOnClickListener((v) -> {
+            Intent intent = new Intent(MainActivity.this, JumpBetweenActivities.class);
+            startActivity(intent);
+        });
+        Button explicitIntent_bt2 = (Button) findViewById(R.id.explicitIntent_bt2);
+        explicitIntent_bt2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,JumpBetweenActivities.class);
-                startActivity(intent);
+                JumpBetweenActivities jumpBetweenActivities = new JumpBetweenActivities();
+                jumpBetweenActivities.showMe(MainActivity.this);
             }
         });
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu,menu);
+        getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.item_toast:
-                Toast.makeText(this,"test...",Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "test...", Toast.LENGTH_LONG).show();
                 break;
             case R.id.item_close:
                 finish();

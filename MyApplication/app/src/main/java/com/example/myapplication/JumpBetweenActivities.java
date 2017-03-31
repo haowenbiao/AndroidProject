@@ -13,12 +13,12 @@ public class JumpBetweenActivities extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jump_bettwen_activitys);
-        Button buttonBack =(Button) findViewById(R.id.back_bt);
+        Button buttonBack = (Button) findViewById(R.id.back_bt);
         buttonBack.setOnClickListener(v -> finish());
     }
 
-    public static void showMe(Context context){
-        Intent intent=new Intent(context,JumpBetweenActivities.class);
+    public static void showMe(Context context) {
+        Intent intent = new Intent(context, JumpBetweenActivities.class);
         context.startActivity(intent);
     }
 }

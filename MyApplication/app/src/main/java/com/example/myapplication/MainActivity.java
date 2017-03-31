@@ -15,19 +15,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Button explicitIntent_bt1 = (Button) findViewById(R.id.explicitIntent_bt1);
         explicitIntent_bt1.setOnClickListener((v) -> {
             Intent intent = new Intent(MainActivity.this, JumpBetweenActivities.class);
             startActivity(intent);
         });
+
         Button explicitIntent_bt2 = (Button) findViewById(R.id.explicitIntent_bt2);
-        explicitIntent_bt2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                JumpBetweenActivities jumpBetweenActivities = new JumpBetweenActivities();
-                jumpBetweenActivities.showMe(MainActivity.this);
-            }
+        explicitIntent_bt2.setOnClickListener(v -> JumpBetweenActivities.showMe(MainActivity.this));
+
+        Button implicitIntent_bt1 = (Button) findViewById(R.id.implicitIntent_bt1);
+        implicitIntent_bt1.setOnClickListener(v -> {
+            Intent intent = new Intent("com.example.myapplication.ACTION_START");
+            intent.addCategory("com.example.myapplication.MY_CATEGORY");
+            startActivity(intent);
         });
+
+
     }
 
     @Override

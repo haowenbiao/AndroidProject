@@ -19,7 +19,14 @@
         </activity>
         <activity
             android:name=".JumpBetweenActivities"
-            android:label="再Activities之间穿梭"></activity>
+            android:label="再Activities之间穿梭">
+            <intent-filter>
+                <action android:name="com.example.myapplication.ACTION_START" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.example.myapplication.MY_CATEGORY" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

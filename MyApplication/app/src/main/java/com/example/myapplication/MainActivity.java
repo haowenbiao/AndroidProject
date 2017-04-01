@@ -1,8 +1,8 @@
 package com.example.myapplication;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,10 +25,7 @@ public class MainActivity extends AppCompatActivity {
         Button explicitIntent_bt2 = (Button) findViewById(R.id.explicitIntent_bt2);
         explicitIntent_bt2.setOnClickListener((v) -> {
             //JumpBetweenActivities.showMe(MainActivity.this, "hello");
-            //JumpBetweenActivities.showMeWithResult(MainActivity.this, "helloooo", 1);
-            Intent intent = new Intent(MainActivity.this, JumpBetweenActivities.class);
-            intent.putExtra("Data1", "helloooo");
-            startActivityForResult(intent, 1);
+            JumpBetweenActivities.showMeWithResult(MainActivity.this, "helloooo", 1);
         });
 
         Button implicitIntent_bt1 = (Button) findViewById(R.id.implicitIntent_bt1);
@@ -37,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
             intent.addCategory("com.example.myapplication.MY_CATEGORY");
             startActivity(intent);
         });
+
+        Button bt_ShowAlertDialog = (Button) findViewById(R.id.bt_ShowAlertDialog);
+        bt_ShowAlertDialog.setOnClickListener(v -> AlertDialogActivity.start(MainActivity.this));
     }
 
     @Override

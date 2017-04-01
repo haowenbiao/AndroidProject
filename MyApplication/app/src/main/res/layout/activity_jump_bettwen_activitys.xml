@@ -5,15 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.myapplication.JumpBetweenActivities">
-
+    <TextView
+        android:id="@+id/showInputFromIntent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="test"
+        android:textSize="20dp"
+        android:gravity="center"
+        />
     <Button
         android:id="@+id/explicitIntent_bt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="显式Intent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintLeft_toLeftOf="@+id/showInputFromIntent"
+        app:layout_constraintTop_toBottomOf="@+id/showInputFromIntent"/>
     <Button
         android:id="@+id/implicitIntent_bt"
         android:layout_width="wrap_content"
@@ -28,4 +37,13 @@
         android:text="返回"
         app:layout_constraintTop_toBottomOf="@+id/implicitIntent_bt"
         app:layout_constraintLeft_toLeftOf="@+id/implicitIntent_bt" />
+
+    <Button
+        android:id="@+id/backWithResult_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回结果"
+        app:layout_constraintLeft_toLeftOf="@+id/back_bt"
+        app:layout_constraintTop_toBottomOf="@+id/back_bt" />
+
 </android.support.constraint.ConstraintLayout>

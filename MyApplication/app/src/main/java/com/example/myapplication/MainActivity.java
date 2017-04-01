@@ -23,7 +23,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button explicitIntent_bt2 = (Button) findViewById(R.id.explicitIntent_bt2);
-        explicitIntent_bt2.setOnClickListener(v -> JumpBetweenActivities.showMe(MainActivity.this));
+        explicitIntent_bt2.setOnClickListener((v) -> {
+            //JumpBetweenActivities.showMe(MainActivity.this, "hello");
+            //JumpBetweenActivities.showMeWithResult(MainActivity.this, "helloooo", 1);
+            Intent intent = new Intent(MainActivity.this, JumpBetweenActivities.class);
+            intent.putExtra("Data1", "helloooo");
+            startActivityForResult(intent, 1);
+        });
 
         Button implicitIntent_bt1 = (Button) findViewById(R.id.implicitIntent_bt1);
         implicitIntent_bt1.setOnClickListener(v -> {
@@ -31,8 +37,19 @@ public class MainActivity extends AppCompatActivity {
             intent.addCategory("com.example.myapplication.MY_CATEGORY");
             startActivity(intent);
         });
+    }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode) {
+            case 1:
+                if (resultCode == RESULT_OK) {
+                    String data_t = data.getStringExtra("data_result");
+                    Toast.makeText(this, data_t, Toast.LENGTH_SHORT).show();
+                }
 
+        }
     }
 
     @Override

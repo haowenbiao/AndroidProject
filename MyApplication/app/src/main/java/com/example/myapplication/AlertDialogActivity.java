@@ -30,9 +30,4 @@ public class AlertDialogActivity extends ActivityWithCloseMenu {
             alertDialogBuilder.show();
         }));
     }
-
-    public static void start(Context context) {
-        Intent starter = new Intent(context, AlertDialogActivity.class);
-        context.startActivity(starter);
-    }
 }

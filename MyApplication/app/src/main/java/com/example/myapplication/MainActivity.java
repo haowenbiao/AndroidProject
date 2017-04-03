@@ -36,7 +36,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button bt_ShowAlertDialog = (Button) findViewById(R.id.bt_ShowAlertDialog);
-        bt_ShowAlertDialog.setOnClickListener(v -> AlertDialogActivity.start(MainActivity.this));
+        bt_ShowAlertDialog.setOnClickListener(v -> AlertDialogActivity.start(MainActivity.this,AlertDialogActivity.class));
+
+        Button bt_showListViewActivity = (Button) findViewById(R.id.bt_showListViewActivity);
+        bt_showListViewActivity.setOnClickListener(v -> ListViewActivity.start(MainActivity.this,ListViewActivity.class));
     }
 
     @Override
@@ -48,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
                     String data_t = data.getStringExtra("data_result");
                     Toast.makeText(this, data_t, Toast.LENGTH_SHORT).show();
                 }
-
         }
     }
 

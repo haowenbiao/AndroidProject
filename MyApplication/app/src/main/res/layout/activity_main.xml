@@ -16,6 +16,15 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/tv_Line1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#089ba3"
+        app:layout_constraintLeft_toLeftOf="@id/textViewHelloWorld"
+        app:layout_constraintRight_toRightOf="@id/textViewHelloWorld"
+        app:layout_constraintTop_toBottomOf="@id/textViewHelloWorld" />
+
     <Button
         android:id="@+id/explicitIntent_bt1"
         android:layout_width="wrap_content"
@@ -27,7 +36,7 @@
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_Line1" />
+        app:layout_constraintTop_toBottomOf="@id/tv_Line1" />
 
     <Button
         android:id="@+id/explicitIntent_bt2"
@@ -37,7 +46,7 @@
         android:textAllCaps="false"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/explicitIntent_bt1" />
+        app:layout_constraintTop_toBottomOf="@id/explicitIntent_bt1" />
 
     <Button
         android:id="@+id/implicitIntent_bt1"
@@ -47,7 +56,7 @@
         android:textAllCaps="false"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/explicitIntent_bt2" />
+        app:layout_constraintTop_toBottomOf="@id/explicitIntent_bt2" />
 
     <TextView
         android:id="@+id/tv_Line2"
@@ -59,26 +68,30 @@
         android:background="#089ba3"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/implicitIntent_bt1" />
+        app:layout_constraintTop_toBottomOf="@id/implicitIntent_bt1" />
 
-    <TextView
-        android:id="@+id/tv_Line1"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:background="#089ba3"
-        app:layout_constraintLeft_toLeftOf="@id/textViewHelloWorld"
-        app:layout_constraintRight_toRightOf="@id/textViewHelloWorld"
-        app:layout_constraintTop_toBottomOf="@+id/textViewHelloWorld" />
+
 
     <Button
         android:id="@+id/bt_ShowAlertDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="显示AlertDialog"
+        android:textAllCaps="false"
         app:layout_constraintTop_toBottomOf="@id/tv_Line2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="10dp"
         />
+
+    <Button
+        android:id="@+id/bt_showListViewActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示ListView窗体"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_ShowAlertDialog" />
 
 </android.support.constraint.ConstraintLayout>

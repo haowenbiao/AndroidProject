@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -23,43 +24,68 @@ import java.util.List;
 public class ListViewActivity extends ActivityWithCloseMenu {
 
     ListView lv_sample;
+    My_Adapter my_listItemMyAdapter;
+    List<My_ListItem> my_listItems;
+    ArrayAdapter<String> my_stringArrayAdapter;
+    String[] my_listString;
+    int YANGSHI1 = 1;
+    int YANGSHI2 = 2;
+    int yangshi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view);
 
+        lv_sample = (ListView) findViewById(R.id.lv_sample);
         yangshi1();
+        yangshi2();
+        lv_sample.setAdapter(my_listItemMyAdapter);
+        yangshi = YANGSHI1;
 
         //样式1-复杂（默认）
         Button bt_yangshi1 = (Button) findViewById(R.id.bt_yangshi1);
-        bt_yangshi1.setOnClickListener(v -> yangshi1());
+        bt_yangshi1.setOnClickListener(v -> {
+            lv_sample.setAdapter(my_listItemMyAdapter);
+            yangshi = YANGSHI1;
+        });
 
         //样式2-简单
         Button bt_yangshi2 = (Button) findViewById(R.id.bt_yangshi2);
-        bt_yangshi2.setOnClickListener(v -> yangshi2());
+        bt_yangshi2.setOnClickListener(v -> {
+            lv_sample.setAdapter(my_stringArrayAdapter);
+            yangshi = YANGSHI2;
+        });
+
+        //ListView响应点击事件
+        lv_sample.setOnItemClickListener((parent, view, position, id) -> {
+            if (yangshi == YANGSHI1) {
+                My_ListItem my_listItem = my_listItems.get(position);
+                Toast.makeText(ListViewActivity.this, my_listItem.getName() + my_listItem.getId(), Toast.LENGTH_SHORT).show();
+            } else {
+                String string = my_listString[position];
+                Toast.makeText(ListViewActivity.this, string, Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 
     private void yangshi1() {
-        List<My_ListItem> my_listItems = new ArrayList<>();
-        for (int i = 0; i < 30; i++) {
+        my_listItems = new ArrayList<>();
+        for (int i = 0; i < 300; i++) {
             My_ListItem my_listItem = new My_ListItem(i, "sample");
             my_listItems.add(my_listItem);
         }
-        My_Adapter my_listItemMyAdapter = new My_Adapter(ListViewActivity.this, R.layout.layout_item, my_listItems);
-        lv_sample = (ListView) findViewById(R.id.lv_sample);
-        lv_sample.setAdapter(my_listItemMyAdapter);
+        my_listItemMyAdapter = new My_Adapter(ListViewActivity.this, R.layout.layout_item, my_listItems);
     }
 
     private void yangshi2() {
         //简单ListView
-        String[] list = {"string-1", "string-2", "string-3", "string-4", "string-5", "string-6",
+        String[] t_listString = {"string-1", "string-2", "string-3", "string-4", "string-5", "string-6",
                 "string-1", "string-2", "string-3", "string-4", "string-5", "string-6",
                 "string-1", "string-2", "string-3", "string-4", "string-5", "string-6"};
-        ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, list);
-        lv_sample = (ListView) findViewById(R.id.lv_sample);
-        lv_sample.setAdapter(stringArrayAdapter);
+        my_listString = t_listString;
+        my_stringArrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, my_listString);
     }
 
     private class My_ListItem {
@@ -93,15 +119,29 @@ public class ListViewActivity extends ActivityWithCloseMenu {
         @Override
         public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
             My_ListItem my_listItem = getItem(position);
-            View view = LayoutInflater.from(getContext()).inflate(resourceIdOfLayoutItem, parent, false);
+            ViewHolder viewHolder;
+            View view;
+            if (convertView == null) {
+                view = LayoutInflater.from(getContext()).inflate(resourceIdOfLayoutItem, parent, false);
+                viewHolder = new ViewHolder();
+                viewHolder.tv_Id = (TextView) view.findViewById(R.id.tv_item_Id);
+                viewHolder.tv_Name = (TextView) view.findViewById(R.id.tv_item_Name);
+                view.setTag(viewHolder);
+            } else {
+                view = convertView;
+                viewHolder = (ViewHolder) view.getTag();
+            }
 
-            TextView tv_Item_Id = (TextView) view.findViewById(R.id.tv_item_Id);
-            tv_Item_Id.setText(String.valueOf(my_listItem.getId()));
-
-            TextView tv_item_name = (TextView) view.findViewById(R.id.tv_item_Name);
-            tv_item_name.setText(my_listItem.getName());
+            viewHolder.tv_Id.setText(String.valueOf(my_listItem.getId()));
+            viewHolder.tv_Name.setText(my_listItem.getName());
             return view;
         }
+
+        private class ViewHolder {
+            TextView tv_Id;
+            TextView tv_Name;
+        }
+
     }
 }
 

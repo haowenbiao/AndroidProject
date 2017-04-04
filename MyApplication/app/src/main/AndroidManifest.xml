@@ -31,7 +31,12 @@
         <activity
             android:name=".AlertDialogActivity"
             android:label="Dialogs" />
-        <activity android:name=".ListViewActivity"></activity>
+        <activity
+            android:name=".ListViewActivity"
+            android:label="ListViewSample" />
+        <activity
+            android:name=".RecyclerViewActivity"
+            android:label="RecyclerViewSample" />
     </application>
 
 </manifest>

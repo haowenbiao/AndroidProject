@@ -45,9 +45,12 @@ public class ListViewActivity extends ActivityWithCloseMenu {
 
         //样式1-复杂（默认）
         Button bt_yangshi1 = (Button) findViewById(R.id.bt_yangshi1);
-        bt_yangshi1.setOnClickListener(v -> {
-            lv_sample.setAdapter(my_listItemMyAdapter);
-            yangshi = YANGSHI1;
+        bt_yangshi1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lv_sample.setAdapter(my_listItemMyAdapter);
+                yangshi = YANGSHI1;
+            }
         });
 
         //样式2-简单

@@ -36,10 +36,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button bt_ShowAlertDialog = (Button) findViewById(R.id.bt_ShowAlertDialog);
-        bt_ShowAlertDialog.setOnClickListener(v -> AlertDialogActivity.start(MainActivity.this,AlertDialogActivity.class));
+        bt_ShowAlertDialog.setOnClickListener(v -> AlertDialogActivity.start(MainActivity.this, AlertDialogActivity.class));
 
         Button bt_showListViewActivity = (Button) findViewById(R.id.bt_showListViewActivity);
-        bt_showListViewActivity.setOnClickListener(v -> ListViewActivity.start(MainActivity.this,ListViewActivity.class));
+        bt_showListViewActivity.setOnClickListener(v -> ListViewActivity.start(MainActivity.this, ListViewActivity.class));
+
+        Button bt_showRecyclerViewActivity = (Button) findViewById(R.id.bt_showRecyclerViewActivity);
+        bt_showRecyclerViewActivity.setOnClickListener(v -> RecyclerViewActivity.start(MainActivity.this,RecyclerViewActivity.class));
     }
 
     @Override

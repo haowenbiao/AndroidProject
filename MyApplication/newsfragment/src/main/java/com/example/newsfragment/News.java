@@ -1,15 +1,13 @@
 package com.example.newsfragment;
 
-import android.support.v4.app.Fragment;
-
 /**
  * 作者：郝文标 on 2017/4/6 16:40
  * 邮箱：haowenbiao@126.com
  */
 
-class News {
-    String m_Title;
-    String m_Content;
+public class News {
+    private String m_Title;
+    private String m_Content;
 
     public String getTitle() {
         return m_Title;
@@ -26,7 +24,4 @@ class News {
     public void setContent(String m_Content) {
         this.m_Content = m_Content;
     }
-}
-
-public class NewsFragment extends Fragment {
 }

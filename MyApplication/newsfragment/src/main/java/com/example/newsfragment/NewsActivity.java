@@ -3,6 +3,9 @@ package com.example.newsfragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class NewsActivity extends AppCompatActivity {
 
     @Override
@@ -10,4 +13,6 @@ public class NewsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
     }
+
+
 }

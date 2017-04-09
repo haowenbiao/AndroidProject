@@ -1,27 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="com.example.newsfragment.NewsActivity">
 
     <fragment
         android:id="@+id/fr_NewsContentFragment"
         android:name="com.example.newsfragment.NewsContentFragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/v_Line1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:layout_width="match_parent"
+        android:id="@+id/v_Line1"
+        android:layout_width="0dp"
         android:layout_height="1dp"
-        android:background="#fff" />
+        android:background="#fff"
+        app:layout_constraintBottom_toTopOf="@+id/fr_NewsTitleFragment"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <View
+        android:id="@+id/v_Line2"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/v_Line3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/fr_NewsTitleFragment"
+        app:layout_constraintTop_toTopOf="@+id/fr_NewsTitleFragment"
+        android:background="#fff"
+        />
+    <View
+        android:id="@+id/v_Line3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#fff"
+        />
 
     <fragment
         android:id="@+id/fr_NewsTitleFragment"
         android:name="com.example.newsfragment.NewsTitleFragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/v_Line3"
+        app:layout_constraintLeft_toRightOf="@id/v_Line2"
+        app:layout_constraintRight_toRightOf="parent" />
 
-</LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

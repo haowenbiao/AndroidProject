@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.newsfragment.NewsActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -43,6 +45,14 @@ public class MainActivity extends AppCompatActivity {
 
         Button bt_showRecyclerViewActivity = (Button) findViewById(R.id.bt_showRecyclerViewActivity);
         bt_showRecyclerViewActivity.setOnClickListener(v -> RecyclerViewActivity.start(MainActivity.this,RecyclerViewActivity.class));
+
+        Button bt_showNewsActivity = (Button) findViewById(R.id.bt_showNewsActivity);
+        bt_showNewsActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NewsActivity.start(MainActivity.this);
+            }
+        });
     }
 
     @Override

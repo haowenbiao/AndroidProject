@@ -1,5 +1,8 @@
 package com.example.newsfragment;
 
+
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -14,5 +17,9 @@ public class NewsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_news);
     }
 
+    public static void start(Context context) {
+        Intent starter = new Intent(context, NewsActivity.class);
+        context.startActivity(starter);
+    }
 
 }

@@ -1,1 +1,1 @@
-include ':app', ':newsfragment'
+include ':app', ':newsfragment', ':forceoffline'

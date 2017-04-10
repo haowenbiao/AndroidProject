@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.forceoffline.LoginActivity;
 import com.example.newsfragment.NewsActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -51,6 +52,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 NewsActivity.start(MainActivity.this);
+            }
+        });
+
+        Button bt_forceOffLine = (Button) findViewById(R.id.bt_forceOffLine);
+        bt_forceOffLine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LoginActivity.start(MainActivity.this);
             }
         });
     }

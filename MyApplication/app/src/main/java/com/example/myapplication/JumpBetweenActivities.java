@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 public class JumpBetweenActivities extends ActivityWithCloseMenu {
 
     @Override
@@ -37,10 +39,17 @@ public class JumpBetweenActivities extends ActivityWithCloseMenu {
             setResult(RESULT_OK, intent_t);
             finish();
         });
+
+        LottieAnimationView lav_sample_1 = (LottieAnimationView) findViewById(R.id.lav_sample_1);
+        lav_sample_1.setAnimation("coeur.json");
+        lav_sample_1.loop(true);
+        lav_sample_1.playAnimation();
+        
     }
 
     /**
      * 自我显式     *
+     *
      * @param context Context
      * @param data    数据
      */
@@ -52,13 +61,14 @@ public class JumpBetweenActivities extends ActivityWithCloseMenu {
 
     /**
      * 返回结果的自我显示
-     * @param context context
-     * @param data 数据
+     *
+     * @param context     context
+     * @param data        数据
      * @param requestCode 请求码
      */
     public static void showMeWithResult(Context context, String data, int requestCode) {
-        Intent intent = new Intent(context,JumpBetweenActivities.class);
+        Intent intent = new Intent(context, JumpBetweenActivities.class);
         intent.putExtra("data1", data);
-        ((Activity)context).startActivityForResult(intent, requestCode);
+        ((Activity) context).startActivityForResult(intent, requestCode);
     }
 }

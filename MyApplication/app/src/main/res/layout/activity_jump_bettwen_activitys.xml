@@ -37,7 +37,6 @@
         android:text="返回"
         app:layout_constraintTop_toBottomOf="@+id/implicitIntent_bt"
         app:layout_constraintLeft_toLeftOf="@+id/implicitIntent_bt" />
-
     <Button
         android:id="@+id/backWithResult_bt"
         android:layout_width="wrap_content"
@@ -45,5 +44,13 @@
         android:text="返回结果"
         app:layout_constraintLeft_toLeftOf="@+id/back_bt"
         app:layout_constraintTop_toBottomOf="@+id/back_bt" />
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lav_sample_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backWithResult_bt"
+        />
 
 </android.support.constraint.ConstraintLayout>

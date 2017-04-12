@@ -1,1 +1,1 @@
-include ':app', ':newsfragment', ':forceoffline', ':lottie'
+include ':app', ':newsfragment', ':forceoffline', ':lottie', ':datapersistence'

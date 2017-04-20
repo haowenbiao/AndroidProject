@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="文件输入输出"
+        android:onClick="tn_file_output_inputClick"
         />
     
 </android.support.constraint.ConstraintLayout>

@@ -76,24 +76,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.item_toast:
-                Toast.makeText(this, "test...", Toast.LENGTH_LONG).show();
-                break;
-            case R.id.item_close:
-                finish();
-                break;
-            default:
-        }
-        return true;
-    }
 
 }

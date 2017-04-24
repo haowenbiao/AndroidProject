@@ -11,7 +11,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="文件输入输出"
-        android:onClick="tn_file_output_inputClick"
+        android:onClick="btn_file_output_inputClick"
+        />
+    <Button
+        android:id="@+id/btn_sharedPreferences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preferences"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/btn_file_output_input"
+        android:onClick="btn_preferences_Click"
         />
     
 </android.support.constraint.ConstraintLayout>

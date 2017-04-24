@@ -12,7 +12,11 @@ public class DataPersistenceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_data_persistence);
     }
 
-    public void tn_file_output_inputClick(View v){
+    public void btn_file_output_inputClick(View v){
         FileOutputInputActivity.start(this);
+    }
+
+    public void btn_preferences_Click(View v){
+        SharedPreferencesActivity.start(this);
     }
 }

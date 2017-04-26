@@ -8,6 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6e32eeed-e59a-4cf9-b49e-4d6fd89f2c69" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datapersistence/src/main/java/com/example/datapersistence/SharedPreferencesActivity.java" afterPath="$PROJECT_DIR$/datapersistence/src/main/java/com/example/datapersistence/SharedPreferencesActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datapersistence/src/main/res/layout/activity_shared_preferences.xml" afterPath="$PROJECT_DIR$/datapersistence/src/main/res/layout/activity_shared_preferences.xml" />
     </list>
     <ignored path="MyApplication.iws" />
@@ -46,9 +47,25 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
-              <folding />
+            <state relative-caret-position="489">
+              <caret line="63" column="25" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
+              <folding>
+                <element signature="e#411#1313#0" expanded="false" />
+                <element signature="e#972#1260#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SharedPreferencesActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/datapersistence/src/main/java/com/example/datapersistence/SharedPreferencesActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="54" column="29" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+              <folding>
+                <element signature="method#onCreate#0;class#SharedPreferencesActivity#0" expanded="false" />
+                <element signature="class#859:1478" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -5211,8 +5228,8 @@
         <option value="$PROJECT_DIR$/datapersistence/src/main/res/layout/activity_file_output_input.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/MainActivity.java" />
         <option value="$PROJECT_DIR$/datapersistence/src/main/res/layout/activity_data_persistence.xml" />
-        <option value="$PROJECT_DIR$/datapersistence/src/main/java/com/example/datapersistence/SharedPreferencesActivity.java" />
         <option value="$PROJECT_DIR$/datapersistence/src/main/java/com/example/datapersistence/DataPersistenceActivity.java" />
+        <option value="$PROJECT_DIR$/datapersistence/src/main/java/com/example/datapersistence/SharedPreferencesActivity.java" />
         <option value="$PROJECT_DIR$/datapersistence/src/main/res/layout/activity_shared_preferences.xml" />
       </list>
     </option>
@@ -5251,9 +5268,6 @@
       <pane id="AndroidView">
         <subPane />
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -5414,6 +5428,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -5859,7 +5876,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.49352053" order="7" side_tool="false" content_ui="tabs" />
@@ -5907,6 +5924,34 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/datapersistence/src/main/res/layout/activity_shared_preferences.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <folding>
+            <element signature="e#411#1313#0" expanded="false" />
+            <element signature="e#972#1260#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datapersistence/src/main/res/layout/activity_shared_preferences.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+          <folding>
+            <element signature="e#411#1313#0" expanded="false" />
+            <element signature="e#972#1260#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/datapersistence/src/main/res/layout/activity_file_output_input.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -5923,8 +5968,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#537#538#0" expanded="true" />
-            <element signature="e#590#591#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="false" />
+            <element signature="e#590#591#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -5947,7 +5992,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-          <folding />
+          <folding>
+            <element signature="e#411#1313#0" expanded="false" />
+            <element signature="e#972#1260#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -5958,7 +6006,7 @@
           <folding>
             <element signature="imports" expanded="false" />
             <element signature="method#onCreate#0;class#SharedPreferencesActivity#0" expanded="false" />
-            <element signature="class#833:1452" expanded="false" />
+            <element signature="class#859:1478" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -5979,8 +6027,8 @@
         <state relative-caret-position="350">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <element signature="e#537#538#0" expanded="true" />
-            <element signature="e#590#591#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="false" />
+            <element signature="e#590#591#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -6000,9 +6048,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -6022,8 +6067,8 @@
         <state relative-caret-position="325">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
-            <element signature="e#537#538#0" expanded="true" />
-            <element signature="e#590#591#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="false" />
+            <element signature="e#590#591#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -6043,9 +6088,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -6065,8 +6107,8 @@
         <state relative-caret-position="228">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
-            <element signature="e#537#538#0" expanded="true" />
-            <element signature="e#590#591#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="false" />
+            <element signature="e#590#591#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -6123,8 +6165,8 @@
         <state relative-caret-position="297">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
-            <element signature="e#537#538#0" expanded="true" />
-            <element signature="e#590#591#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="false" />
+            <element signature="e#590#591#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -6168,7 +6210,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-486">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -6179,7 +6220,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -6187,9 +6227,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -6212,9 +6249,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="681">
           <caret line="93" column="9" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -6226,25 +6260,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datapersistence/src/main/java/com/example/datapersistence/SharedPreferencesActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#onCreate#0;class#SharedPreferencesActivity#0" expanded="false" />
-            <element signature="class#833:1452" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/datapersistence/src/main/java/com/example/datapersistence/DataPersistenceActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
           <folding>
-            <element signature="e#537#538#0" expanded="true" />
-            <element signature="e#590#591#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="false" />
+            <element signature="e#590#591#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -6271,14 +6293,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/datapersistence/src/main/java/com/example/datapersistence/SharedPreferencesActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="54" column="29" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+          <folding>
+            <element signature="method#onCreate#0;class#SharedPreferencesActivity#0" expanded="false" />
+            <element signature="class#859:1478" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/datapersistence/src/main/res/layout/activity_shared_preferences.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
-          <folding />
+        <state relative-caret-position="489">
+          <caret line="63" column="25" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
+          <folding>
+            <element signature="e#411#1313#0" expanded="false" />
+            <element signature="e#972#1260#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

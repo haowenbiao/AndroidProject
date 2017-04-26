@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 
 public class SharedPreferencesActivity extends AppCompatActivity {
 
@@ -45,5 +46,13 @@ public class SharedPreferencesActivity extends AppCompatActivity {
     public static void start(Context context) {
         Intent starter = new Intent(context, SharedPreferencesActivity.class);
         context.startActivity(starter);
+    }
+
+    public void btn_saveClick(View v){
+
+    }
+
+    public void btn_loadClick(View v){
+
     }
 }

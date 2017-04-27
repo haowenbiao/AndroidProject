@@ -11,7 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:counterEnabled="true"
-        app:counterMaxLength="8"
+        app:counterMaxLength="@integer/phonenumber"
         app:counterOverflowTextAppearance="@style/TextAppearance.Design.Counter.Overflow"
         app:counterTextAppearance="@style/TextAppearance.Design.Counter"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -24,6 +24,7 @@
             android:layout_height="wrap_content"
             android:hint="Input number......"
             android:inputType="number"
+            android:maxLength="@integer/phonenumber"
             />
     </android.support.design.widget.TextInputLayout>
 
@@ -32,7 +33,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:counterEnabled="true"
-        app:counterMaxLength="8"
+        app:counterMaxLength="@integer/phonenumber"
         app:counterOverflowTextAppearance="@style/TextAppearance.Design.Counter.Overflow"
         app:counterTextAppearance="@style/TextAppearance.Design.Counter"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -43,8 +44,9 @@
             android:id="@+id/tiet_sample2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input number......"
+            android:hint="Input anything......"
             android:inputType="text"
+            android:maxLength="@integer/phonenumber"
             />
     </android.support.design.widget.TextInputLayout>
 

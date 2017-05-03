@@ -26,6 +26,7 @@ public class SQLiteActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        
     }
 
     @Override

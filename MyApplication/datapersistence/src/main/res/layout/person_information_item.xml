@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_xuhao"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="16dp"
+        android:text="序号"
+        android:textSize="18sp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tv_xuhao"
+        app:layout_constraintBottom_toBottomOf="@id/tv_xuhao"
+        app:layout_constraintLeft_toRightOf="@id/tv_xuhao"
+        android:layout_margin="16dp"
+        android:text="郝文标namenamename"
+        android:textSize="18sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:maxEms="10"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

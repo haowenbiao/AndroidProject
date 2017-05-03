@@ -22,10 +22,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".FileOutputInputActivity" />
+        <activity android:name=".SharedPreferencesActivity" />
         <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login" />
-        <activity android:name=".SharedPreferencesActivity"></activity>
+            android:name=".SQLiteActivity"
+            android:label="@string/title_activity_sqlite" />
     </application>
 
 </manifest>

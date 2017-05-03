@@ -15,4 +15,6 @@
         completions."
     </string>
     <integer name="phonenumber">8</integer>
+    <string name="title_activity_sqlite">SQLiteActivity</string>
+    <string name="action_settings">Settings</string>
 </resources>
